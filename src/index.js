@@ -2,7 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import walkThrough from './walkThrough';
 import * as serviceWorker from './serviceWorker';
+
+const walkThroughText = localStorage.getItem('markdownData');
+if (!walkThroughText) {
+  localStorage.setItem('markdownData', walkThrough);
+}
 
 ReactDOM.render(
   <React.StrictMode>
